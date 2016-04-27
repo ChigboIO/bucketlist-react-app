@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-import App from './components/App';
+import AppRouter from './js/config/routes';
 
 var appDiv = document.getElementById('app');
 
-ReactDOM.render(<App />, appDiv);
+ReactDOM.render(AppRouter, appDiv);
