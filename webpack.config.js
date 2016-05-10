@@ -34,5 +34,21 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js', '.jsx', '.scss'],
+
+    // define where your modules will be resolved
+    moduleDirectories: ['node_modules', 'bower_components', 'shared'],
+
+    // add aliases for commonly used modules
+    alias: {
+      actions: path.resolve('./app/src/js/actions'),
+      stores: path.resolve('./app/src/js/stores'),
+      dispatcher: path.resolve('./app/src/js/dispatcher'),
+      constants: path.resolve('./app/src/js/constants'),
+      lib: path.resolve('./app/src/js/lib'),
+    }
   }
 };

@@ -15,16 +15,16 @@ class Header extends React.Component {
       <Navbar style={ navStyle }>
         <Navbar.Header style={{  }}>
           <Navbar.Brand>
-            <a href="#" style={{ color: 'black' }}>Bucketlist</a>
+            <a href="#" style={{ color: '#ccc' }}>Bucketlist</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Navbar.Text>
-            Signed in as: <Navbar.Link href="#">Mark Otto</Navbar.Link>
+            Signed in as: <Navbar.Link href="#">Emmanuel Science</Navbar.Link>
           </Navbar.Text>
           <Navbar.Text pullRight>
-            Have a great day!
+            Never loose track of your wishes!
           </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>

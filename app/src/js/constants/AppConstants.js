@@ -1,0 +1,7 @@
+// define all the application actions here
+export default {
+  CREATE_BUCKET: "CREATE_BUCKET",
+  INITIALIZE_BUCKETS: "INITIALIZE_BUCKETS",
+  LOADING_BUCKETS: "LOADING_BUCKETS",
+  LOAD_ERROR: "LOAD_ERROR",
+}

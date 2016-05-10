@@ -5,7 +5,16 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: 'Roboto, sans-serif';
+  font-family: "Roboto";
+}
+
+.nav.nav-tabs a {
+  outline: none;
+  margin-right: 0.2em !important;
+  color: #eeeeee;
+  &:hover {
+    color: #555555;
+  }
 }
 
 // overide the react-bootstrap's container set to '750px' to '100%'

@@ -1,13 +1,18 @@
 import React from 'react';
 require('../../../stylesheet/main.scss');
 
-import Header from './Header';
-import Body from './Body';
-import Footer from './Footer';
+import Header from './shared/Header';
+import Body from './shared/Body';
+import Footer from './shared/Footer';
+import AppActions from 'actions/AppActions';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    AppActions.getAllBuckets();
   }
 
   render() {
@@ -28,7 +33,9 @@ export default class App extends React.Component {
         <div style={ upperBody }>
           <Header />
         </div>
-        <Body />
+        <Body params={this.props.params}>
+          { this.props.children }
+        </Body>
         <Footer />
       </div>
     );

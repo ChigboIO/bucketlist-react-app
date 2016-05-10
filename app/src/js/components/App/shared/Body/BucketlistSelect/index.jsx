@@ -6,6 +6,12 @@ class BucketlistSelect extends Component {
     super(props);
   }
 
+  buildBucketOptions() {
+    return this.props.buckets.map(function(bucket, index) {
+      return (<option key={index} value={index + 1}>{bucket}</option>)
+    })
+  }
+
   render() {
     const selectStyle = {
       width: '100%',
@@ -16,12 +22,8 @@ class BucketlistSelect extends Component {
       <Grid>
         <Row>
           <Col>
-            <select style={ selectStyle }>
-              <option>All</option>
-              <option>While in Andela</option>
-              <option>In my Career</option>
-              <option>Before I turn 40</option>
-              <option>Before I die</option>
+            <select style={ selectStyle} onChange={this.props.selectionHandler}>
+              { this.buildBucketOptions() }
             </select>
           </Col>
         </Row>
